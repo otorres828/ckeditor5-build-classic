@@ -14,9 +14,9 @@ The classic editor build for CKEditor 5. Read more about the [classic editor bui
 
 ## Instalacion
 
-_Una vez clonado el repositorio_ para hacer uso del editor, solo necesitaras la carpeta build, puedes incluirla en tu proyecto.
+_Una vez clonado el repositorio_ para hacer uso del editor, solo necesitaras la carpeta **build**, puedes incluirla en tu proyecto.
 
-Si usas un proyecto laravel, dentro de la carpeta vendor creas otra subcarpeta llamada *ckeditor5-build-classic* y dentro de esa carpeta incluyes la carpeta build del repositorio clonado o descargado.
+Si usas un proyecto laravel, dentro de la carpeta vendor creas otra subcarpeta llamada **ckeditor5-build-classic** y dentro de esa carpeta incluyes la carpeta **build** del repositorio clonado o descargado.
 
 ## Uso Html
 Para usar, puedes crear una etiqueta:
@@ -34,7 +34,6 @@ Si usas Node
 Si usas Laravel
 ```js
 <script src="{{ asset('vendor\ckeditor5-build-classic\build/ckeditor.js') }}"></script>
-
 ```
 Luego colocas el siguiente script
 ```js
