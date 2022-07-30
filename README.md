@@ -19,53 +19,41 @@ See:
 * [Configuration](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html) for how to configure the editor.
 * [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#building-the-editor-from-source) for how to customize the build (configure and rebuild the editor bundle).
 
-## Quick start
+## Instalacion
 
-First, install the build from npm:
+_Una vez clonado el repositorio_ para hacer uso del editor, solo necesitaras la carpeta build, puedes incluirla en tu proyecto.
 
-```bash
-npm install --save @ckeditor/ckeditor5-build-classic
-```
+Si usas un proyecto laravel, dentro de la carpeta vendor creas otra subcarpeta llamada *ckeditor5-build-classic* y dentro de esa carpeta incluyes la carpeta build del repositorio clonado o descargado.
 
-And use it in your website:
+## Uso Html
+Para usar, puedes crear una etiqueta:
+<textarea id="editor" name="editor"></textarea>
+ 
+## Uso Script
+hacemos referencia a la carpeta 'build/ckeditor.js'
 
-```html
-<div id="editor">
-	<p>This is the editor content.</p>
-</div>
+Si usas Node
 <script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-<script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
-		} );
-</script>
-```
 
-Or in your JavaScript application:
+Si usas Laravel
+```
+<script src="{{ asset('vendor\ckeditor5-build-classic\build/ckeditor.js') }}"></script>
+```js
+
+Luego colocas el siguiente script
+```
+<script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ),{
+                mediaEmbed: {
+                                previewsInData:true
+                            },
+                            
+            },)
+            .catch( error => {
+                console.error( error );
+            } 
+        );
+    </script>
 
 ```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
-// Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
-
-ClassicEditor
-	.create( document.querySelector( '#editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );
-```
-
-**Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/installation/advanced/advanced-setup.html).
-
-## License
-
-Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license).
