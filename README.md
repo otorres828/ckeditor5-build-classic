@@ -38,16 +38,15 @@ Si usas Laravel
 Luego colocas el siguiente script
 ```js
 <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ),{
-                mediaEmbed: {
-                                previewsInData:true
-                            },
-                            
+    ClassicEditor
+        .create( document.querySelector( '#editor' ),{
+            mediaEmbed: {
+                previewsInData:true
+            },                
             },)
             .catch( error => {
                 console.error( error );
             } 
         );
-    </script>
+</script>
 ```
