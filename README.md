@@ -26,7 +26,7 @@ Para usar, puedes crear una etiqueta:
 ## Uso Script
 hacemos referencia a la carpeta 'build/ckeditor.js'
 
-Si usas Node
+Si usas Node, puedes crear la carpeta **@ckeditor/ckeditor5-build-classic** y ahi dentro incluyes la carpeta **build**
 
 ```js
 <script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
