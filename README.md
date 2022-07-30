@@ -37,6 +37,7 @@ Si usas Laravel
 
 ```
 Luego colocas el siguiente script
+```js
 <script>
         ClassicEditor
             .create( document.querySelector( '#editor' ),{
@@ -50,4 +51,4 @@ Luego colocas el siguiente script
             } 
         );
     </script>
-```js
+```
