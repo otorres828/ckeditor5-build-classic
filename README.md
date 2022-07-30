@@ -27,13 +27,17 @@ Si usas un proyecto laravel, dentro de la carpeta vendor creas otra subcarpeta l
 
 ## Uso Html
 Para usar, puedes crear una etiqueta:
+```
 <textarea id="editor" name="editor"></textarea>
- 
+ ```js
 ## Uso Script
 hacemos referencia a la carpeta 'build/ckeditor.js'
 
 Si usas Node
+
+```
 <script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+```js
 
 Si usas Laravel
 ```
@@ -41,6 +45,7 @@ Si usas Laravel
 ```js
 
 Luego colocas el siguiente script
+
 ```
 <script>
         ClassicEditor
@@ -55,5 +60,4 @@ Luego colocas el siguiente script
             } 
         );
     </script>
-
 ```js
